@@ -7,16 +7,18 @@ public class TreeMapAssignment {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Long p1 = Long.valueOf("9908008431");
+		Long p1 = 9908008431L;
+				//Long.valueOf("9908008431");
 		Long p2 = Long.valueOf("9948280610");
 		Long p3 = Long.valueOf("9676354523");
 		Long p4 = Long.valueOf("8309407463");
-		Contact c1=new Contact(Long.valueOf("9908008431"), "Ram", "mrr@gmail.com", Gender.valueOf("Male"));
-		Contact c2=new Contact(Long.valueOf("9948280610"), "Hema", "mhh@gmail.com", Gender.valueOf("Female"));
-		Contact c3=new Contact(Long.valueOf("9676354523"), "Karthik", "mkr@gmail.com", Gender.valueOf("Male"));
-		Contact c4=new Contact(Long.valueOf("8309407463"), "Deepak", "mdr@gmail.com", Gender.valueOf("Male"));
+		Contact c1=new Contact(p1, "Ram", "mrr@gmail.com", Gender.Male);
+		Contact c2=new Contact(p2, "Hema", "mhh@gmail.com", Gender.Female);
+		Contact c3=new Contact(p3, "Karthik", "mkr@gmail.com", Gender.valueOf("Male"));
+		Contact c4=new Contact(p4, "Deepak", "mdr@gmail.com", Gender.valueOf("Male"));
 		
 		Map<Long,Contact> cntMap = new TreeMap<>(Collections.reverseOrder());
+		//Map<Long,Contact> cntMap = new TreeMap<>();
 		cntMap.put(p1, c1);
 		cntMap.put(p2, c2);
 		cntMap.put(p3, c3);

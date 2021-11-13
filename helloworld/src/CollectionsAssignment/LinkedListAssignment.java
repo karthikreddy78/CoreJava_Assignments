@@ -14,11 +14,12 @@ public class LinkedListAssignment {
 		
 		String stringDate4="24-03-1999";
 		String stringDate1="25-08-2000";
-		String stringDate2="27-09-2012";
+		String stringDate2="27-01-2012";
 		String stringDate3="24-01-1998";
 		Date date1=null;
 		try {
 			date1 = new SimpleDateFormat("dd-MM-yyyy").parse(stringDate1);
+			System.out.println(date1);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,13 +27,17 @@ public class LinkedListAssignment {
 		Date date2=null;
 		try {
 			date2 = new SimpleDateFormat("dd-MM-yyyy").parse(stringDate2);
+			System.out.println(date2);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Date date3=null;
+		
+		//converting string to date
 		try {
 			date3 = new SimpleDateFormat("dd-MM-yyyy").parse(stringDate3);
+			System.out.println(date3);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -40,6 +45,7 @@ public class LinkedListAssignment {
 		Date date4=null;
 		try {
 			date4 = new SimpleDateFormat("dd-MM-yyyy").parse(stringDate4);
+			System.out.println(date4);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -55,11 +61,13 @@ public class LinkedListAssignment {
         ll.add(date4);
         int i=ll.size()-1;
         while(i>=0){
+        	//converting date to string
         	 SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");  
-        	    String strDate= formatter.format(ll.get(i));  
+        	    String strDate= formatter.format(ll.get(i)); 
+        	    
             System.out.print("Your date of Birth is "+strDate + " ");
            int year=1900+ll.get(i).getYear();  
-            
+            //System.out.println(year);
             if(year%4==0)
             {
             	System.out.println("it was a leap year");
@@ -71,14 +79,7 @@ public class LinkedListAssignment {
             i--;
             
         }
-        //System.out.println(ll);
-  /*
-        ll.remove("B");
-        ll.remove(3);
-        ll.removeFirst();
-        ll.removeLast();
-  */
-        //System.out.println(ll);
+      
     }
 	
 }

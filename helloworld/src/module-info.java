@@ -6,4 +6,5 @@
  *
  */
 module helloworld {
+	requires java.net.http;
 }
